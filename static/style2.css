@@ -1,0 +1,86 @@
+/* Content Container styles */
+.content-container {
+    background-color:lightgrey;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url("/static/container_background.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: cursive;
+}
+
+.content-container h2 {
+    text-align: center;
+    color: #007bff; /* Use a blue color for the header */
+    margin-bottom: 20px;
+}
+
+
+/* Table styles */
+.login_container table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse border spacing between table cells */
+    margin-bottom: 20px; /* Add some spacing at the bottom of the table */
+}
+
+.login_container table th,
+.login_container table td {
+    padding: 10px; /* Add padding to table cells */
+    text-align: left; /* Align text to the left in table cells */
+    border: 1px solid #ddd; /* Add a 1px solid border with a light gray color */
+}
+
+.login_container table th {
+    background-color: #f8f9fa; /* Use a light gray color for the header background */
+    font-weight: bold;
+    color: #333; /* Set the text color for the header cells */
+}
+
+.login_container table tbody tr {
+    background-color: #fff; /* Use white background for table rows */
+}
+
+.login_container table tbody tr:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+}
+
+.login_container table tbody tr td:last-child {
+    text-align: center;
+}
+
+.login_container table tbody tr td:last-child a {
+    color: #fff;
+    background-color: #007bff; /* Use a blue color for the button background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.login_container table tbody tr td:last-child a:hover {
+    background-color: #0056b3; /* Darken the button background on hover */
+}
+
+/* Content Container styles */
+.content-container {
+    /* ... */
+    width: 90%; /* Set the content container width to 90% of the page */
+    max-width: 1200px; /* Set a maximum width for the content container */
+}
+
+.content-container h2 {
+    /* ... */
+    margin-bottom: 20px; /* Add some spacing below the header */
+}
+
+.content-container table tr td img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 1000px;
+    max-height: 1000px;
+}

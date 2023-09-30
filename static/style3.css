@@ -1,0 +1,143 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-top: 100px;
+    height: 90%;
+    padding: 20px;
+}
+
+.row .col-md-6:first-child {
+    margin-top: 20px; /* Add margin to the first row of products to create space below the header */
+}
+.container .row{
+    margin-top: 20px;
+    height: 200px;
+}
+.container .row .col-md-6 .product-block .product-image img{
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.card-img-top {
+    height: 400px; /* Set the desired height */
+    object-fit: cover; /* Scale the image while preserving its aspect ratio */
+}
+
+/* Custom CSS for Product Blocks */
+.product-blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-block {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: calc(50% - 40px); /* Make each block take 50% width of the container and subtract the margins */
+    height: 400px;
+    width: 500px;
+    background-color: rgb(66, 72, 72);
+    border-radius: 10px;
+    color: #ddd;
+}
+
+.product-image {
+    flex: 1;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h3 {
+    margin-top: 0;
+}
+
+.navbar {
+    background-color: #c5c9cd;
+    padding: 15px 0;
+    margin-top: 10px;
+    height:10%
+    
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.navbar-nav {
+    margin-bottom: 100px;
+    margin-left: auto;
+}
+
+.nav-link {
+    color: #333;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Custom CSS for centering the navbar */
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Custom CSS for the login container */
+.login_container {
+    background-color: #f8f9fa; /* Set background color for the login container */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow effect */
+    max-width: 400px; /* Limit the width of the login container */
+    margin: 0 auto; /* Center the login container horizontally */
+    margin-top: 100px; /* Add top margin for spacing */
+}
+
+.content-container {
+    background-color: #fff; /* White background for the content container */
+    padding: 30px;
+    margin-top: 80px; /* Add the desired margin to separate it from the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+    border-radius: 10px; /* Add rounded corners to the container */
+}
+.product-image {
+    height: 90%;
+    border-radius: 10px; /* Add rounded corners to the image container */
+    overflow: hidden; /* Hide any image overflow */
+}
+.product-image img {
+    object-fit: cover; /* Make the image cover the entire container */
+    width: 100%;
+    height: 100%;
+}

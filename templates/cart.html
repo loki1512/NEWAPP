@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    
+    <title>{{user.name}}'s cart</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container justify-content-center">
+            <a class="navbar-brand" href="#">MAD Stores - User Cart</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/products">Products</a>
+                </li>
+                {% if logged_in %}
+                <li class="nav-item">
+                    <a class="nav-link btn btn-success" href="/user/cart/test">Checkout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user/products" class="nav-link btn btn-primary">Continue Shopping</a>
+                {% endif %}
+                {% if not logged_in %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Content Container -->
+    <div class="container mt-5">
+        <h1 class="mt-5 text-center">{{user.name}}'s Cart</h1>
+        <h1 class="mt-5 text-center">Cart Total:{{total}}</h1>
+        {% if items | length == 0 %}
+        <h3 class="mt-5 text-center">Cart is empty click <a href="/dashboard">Here</a> to add something!</h3>
+        {% endif %}
+        {% if(message==1)%}
+            <h3 class="mt-5 text-center">Checked out Successfully! Please Refresh to see changes</h3>
+        {% endif %}
+        {%if (message==0) %}
+            <h3 class="mt-5 text-center">Insufficient Inventory please check the availability in cart</h3>
+        {% endif %}
+        
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+            {% for product in items %}
+            <div class="col-md-6">
+                <div class="product-block">
+                    <div class="product-image">
+                        <img src="{{product.image_url}}" alt="{{ product.product_name }}" class="img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <h3>{{ product.product_name }}</h3>
+                        <p>Category: {{ product.category }}</p>
+                        <p>Price: Rs{{ product.unit_cost }}</p>
+                        <p>Quantity: {{ product.quantity }}</p>
+                        <p>Subtatal: Rs{{ product.cost }}</p>
+                        <a href="/user/cart/update/{{ product.entry_id }}" class="btn btn-primary">Edit</a>
+                        <a href="/user/cart/remove/{{product.entry_id}}" class="btn btn-danger">Remove</a>
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+        </div>
+        
+    </div>
+    
+        
+    
+
+    <!-- JavaScript links -->
+    <!-- ... -->
+    
+</body>
+</html>

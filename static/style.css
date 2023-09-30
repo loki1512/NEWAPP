@@ -1,0 +1,97 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    /*background-image: url("/static/backgroundimage.jpg");*/
+    background-image: url("/static/container_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the body height to full viewport height */
+}
+
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+/* Container styles */
+.login_container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.login_container img {
+    max-width: 10px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-input {
+    flex: 2;
+}
+
+/* Table styles */
+.login_container table {
+    width: 100%;
+}
+
+.login_container table tr:hover {
+    background-color: #676161;
+    color: white;
+}
+
+/* Container styles */
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; /* You can choose the background color you want here */
+}
+
+/* Footer styles */
+.footer {
+    background-color: lightblue; /* Use a light gray color for the footer background */
+    color: #333; /* Set the text color for the footer */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #007bff; /* Use a blue color for the footer links */
+}
+
+.footer a:hover {
+    color: #0056b3; /* Darken the footer links on hover */
+}

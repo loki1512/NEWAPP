@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="httpPlatformHandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified" />
+    </handlers>
+    <httpPlatform processPath="D:\home\PythonXX\python.exe">
+      <arguments>"D:\home\site\wwwroot\application.py"</arguments>
+      <stdoutLogEnabled>true</stdoutLogEnabled>
+      <stdoutLogFile="D:\home\LogFiles\python.log" />
+    </httpPlatform>
+  </system.webServer>
+</configuration>
